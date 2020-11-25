@@ -1,0 +1,37 @@
+ALGORITHM Sort_Cart{
+ VAR
+    tab : ARRAY_OF INTEGER[10];
+    
+    i,j,x : INTEGER :=  0;
+    
+
+Write ("donnée le taille de tableau TAB1:");
+     Read(n);
+     
+FOR i FROM 0 TO n DO
+ 
+ read(tab[i]);
+
+END_FOR
+
+}
+
+//traitement
+PROCEDURE  sort_cart_insertion(VAR tab : ARRAY_OF INTEGER)
+BEGIN
+FOR i FROM 1 TO n DO
+   x:=tab[i];
+   FOR j FROM i-1 TO n DO
+
+      IF (x<tab[j]) THEN
+       
+        tab[i]:=tab[j];
+        tab[j]=x;
+        j:=i;
+        break;
+        END_IF
+    END_FOR
+    tab[j+1]=x;
+END_FOR
+END
+ 
